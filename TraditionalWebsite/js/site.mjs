@@ -1,4 +1,4 @@
-window.addEventListener('load', () =>
+document.addEventListener('DOMContentLoaded', () =>
 {
 	/* Tooltip
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
@@ -6,23 +6,6 @@ window.addEventListener('load', () =>
 	document.querySelectorAll('[data-toggle="tooltip"]').forEach((tooltip) =>
 	{
 		new bootstrap.Tooltip(tooltip);
-	});
-
-	/* Mouseover
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-
-	document.querySelectorAll(".main-menu ul li.megamenu").forEach(function (menuItem) {
-		menuItem.addEventListener('mouseover', () =>
-		{
-			if (!menuItem.parentNode.classList.contains("#wrapper"))
-			{
-				document.getElementById("wrapper").classList.add('overlay');
-			}
-		});
-		menuItem.addEventListener('mouseleave', () =>
-		{
-			document.getElementById("wrapper").classList.remove('overlay');
-		});
 	});
 
 	/* Scroll to Top
